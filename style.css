@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-space-900 bg-white;
+  }
+}
+
+@layer components {
+  /* The "Get a Quote" Button Style */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold transition-all duration-200 
+           bg-brand text-white hover:bg-brand-dark hover:shadow-lg active:scale-95;
+  }
+
+  /* Secondary Button for Services */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-slate-200 
+           text-slate-700 hover:border-brand hover:text-brand transition-all duration-200;
+  }
+
+  /* Custom Modal Overlay */
+  .modal-overlay {
+    @apply fixed inset-0 bg-space-900/60 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300;
+  }
+  
+  .modal-overlay.active {
+    @apply opacity-100 pointer-events-auto;
+  }
+}

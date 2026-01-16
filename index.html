@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri | High-Stakes Digital Services</title>
+    
+    <link rel="preload" as="image" href="assets/hero_image_1.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { DEFAULT: '#047857', dark: '#065f46', light: '#ecfdf5' },
+                        space: { 900: '#0f172a', 50: '#f8fafc' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-space-900 font-sans antialiased">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <img src="assets/logo.png" alt="Vetri Logo" class="h-8">
+            <div class="flex items-center gap-8">
+                <a href="#services" class="hidden md:block font-medium hover:text-brand">Services</a>
+                <button onclick="toggleModal()" class="bg-brand text-white px-6 py-2.5 rounded-xl font-bold hover:bg-brand-dark transition-all">
+                    Get a Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black text-center">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero_image_1.jpg" class="w-full h-full object-cover opacity-80">
+            
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl px-6 mt-12">
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-white leading-tight">
+                High-Stakes Digital Services. <br>
+                <span class="text-brand">Zero-Risk Execution.</span>
+            </h1>
+            
+            <p class="mt-6 text-base md:text-lg text-slate-200 max-w-xl mx-auto leading-relaxed">
+                We’ve eliminated the "Trust Tax." Use Vetri to hire vetted digital talent with a built-in escrow guarantee.
+            </p>
+
+            <div class="mt-10 flex flex-row items-center justify-center gap-4">
+                <button onclick="toggleModal()" class="bg-brand text-white px-6 py-4 rounded-xl font-bold hover:bg-brand-dark transition-all whitespace-nowrap text-sm md:text-base">
+                    Get a Quote for Your Project
+                </button>
+                
+                <a href="#services" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-4 rounded-xl font-bold hover:bg-white/20 transition-all whitespace-nowrap text-sm md:text-base">
+                    Explore Services →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-4">The Vetri Safeguard.</h2>
+                <p class="text-slate-500 text-lg mx-auto max-w-2xl">Digital service delivery with the friction—and the risk—removed.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50/50 hover:border-brand hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand/10 text-brand flex items-center justify-center rounded-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                        <i data-lucide="target" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">01. Scope</h3>
+                    <p class="text-slate-600 leading-relaxed text-center">We define exact milestones and technical requirements. Absolute clarity on deliverables before a single dollar moves.</p>
+                </div>
+
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50/50 hover:border-brand hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand/10 text-brand flex items-center justify-center rounded-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">02. Secure</h3>
+                    <p class="text-slate-600 leading-relaxed text-center">Funds are held in escrow for the current milestone. Your investment is protected and only released upon completion.</p>
+                </div>
+
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50/50 hover:border-brand hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand/10 text-brand flex items-center justify-center rounded-2xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">03. Release</h3>
+                    <p class="text-slate-600 leading-relaxed text-center">You only pay after you approve the delivery. High-quality standards are baked into the workflow by default.</p>
+                </div>
+            </div>
+            <div class="mt-16">
+                <a href="terms.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-brand font-semibold transition-all border-b-2 border-slate-100 hover:border-brand pb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                    Read our Full Digital Escrow Terms
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-4">Precision Services.</h2>
+                <p class="text-slate-500 text-lg mx-auto max-w-2xl">Specialized execution across the digital spectrum.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-brand hover:shadow-xl transition-all group flex flex-col items-center">
+                    <i data-lucide="code" class="w-10 h-10 text-slate-400 group-hover:text-brand mb-6 transition-colors"></i>
+                    <h4 class="text-xl font-bold mb-3">Web Development</h4>
+                    <p class="text-sm text-slate-500 mb-8 leading-relaxed text-center">High-performance applications, SaaS platforms, and custom digital ecosystems.</p>
+                    <button onclick="toggleModal('Web Development')" class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl font-bold group-hover:bg-brand group-hover:text-white transition-all">Request Quote</button>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-brand hover:shadow-xl transition-all group flex flex-col items-center">
+                    <i data-lucide="brain-circuit" class="w-10 h-10 text-slate-400 group-hover:text-brand mb-6 transition-colors"></i>
+                    <h4 class="text-xl font-bold mb-3">AI/ML Solutions</h4>
+                    <p class="text-sm text-slate-500 mb-8 leading-relaxed text-center">Custom LLM integrations, automation agents, and data-driven intelligence.</p>
+                    <button onclick="toggleModal('AI/ML Solutions')" class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl font-bold group-hover:bg-brand group-hover:text-white transition-all">Request Quote</button>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-brand hover:shadow-xl transition-all group flex flex-col items-center">
+                    <div class="w-12 h-12 text-slate-400 group-hover:text-brand mb-6 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Data Analysis</h4>
+                    <p class="text-sm text-slate-500 mb-8 leading-relaxed text-center">Transforming raw data into actionable intelligence with custom dashboards and predictive modeling.</p>
+                    <button onclick="toggleModal('Data Analysis')" class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl font-bold group-hover:bg-brand group-hover:text-white transition-all">Request Quote</button>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-brand hover:shadow-xl transition-all group flex flex-col items-center">
+                    <i data-lucide="play-circle" class="w-10 h-10 text-slate-400 group-hover:text-brand mb-6 transition-colors"></i>
+                    <h4 class="text-xl font-bold mb-3">Video Editing</h4>
+                    <p class="text-sm text-slate-500 mb-8 leading-relaxed text-center">Premium post-production, motion graphics, and high-impact brand storytelling.</p>
+                    <button onclick="toggleModal('Video Editing')" class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl font-bold group-hover:bg-brand group-hover:text-white transition-all">Request Quote</button>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 hover:border-brand hover:shadow-xl transition-all group flex flex-col items-center">
+                    <i data-lucide="palette" class="w-10 h-10 text-slate-400 group-hover:text-brand mb-6 transition-colors"></i>
+                    <h4 class="text-xl font-bold mb-3">Brand Identity</h4>
+                    <p class="text-sm text-slate-500 mb-8 leading-relaxed text-center">Visual systems, logo architecture, and comprehensive brand guidelines.</p>
+                    <button onclick="toggleModal('Brand Identity')" class="w-full py-3 bg-slate-50 text-slate-900 rounded-xl font-bold group-hover:bg-brand group-hover:text-white transition-all">Request Quote</button>
+                </div>
+
+                <div class="bg-brand/5 p-10 rounded-3xl border-2 border-dashed border-brand/20 hover:border-brand transition-all group flex flex-col items-center text-center">
+                    <div class="w-12 h-12 text-brand mb-6 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-brand">Need something custom?</h4>
+                    <p class="text-sm text-slate-600 mb-8 leading-relaxed">From strategy to complex integrations, we build what you need with the same Vetri guarantee.</p>
+                    <button onclick="toggleModal('Custom Digital Project')" class="w-full py-3 bg-brand text-white rounded-xl font-bold hover:bg-brand-dark transition-all shadow-lg shadow-brand/10">
+                        Get a Custom Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="quoteModal" class="hidden fixed inset-0 z-[100] bg-space-900/80 backdrop-blur-md items-center justify-center p-6">
+        <div class="bg-white max-w-md w-full rounded-3xl p-10 relative shadow-2xl">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="text-center mb-10">
+                <div class="w-16 h-16 bg-brand/10 text-brand flex items-center justify-center rounded-2xl mx-auto mb-6">
+                    <i data-lucide="message-square" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-space-900">Get Your Project Quote</h3>
+                <p class="text-slate-500 mt-2">Select your preferred contact method.</p>
+            </div>
+
+        <div class="space-y-4">
+            <a id="modalWaLink" href="https://wa.me/2348147576013?text=I%20want%20to%20get%20a%20quote..." 
+            target="_blank"
+            class="flex items-center gap-4 p-5 border border-slate-200 rounded-2xl hover:border-brand hover:bg-brand/5 transition-all group">
+                <div class="w-12 h-12 bg-green-100 text-green-600 flex items-center justify-center rounded-xl group-hover:bg-brand group-hover:text-white transition-all">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                    <span class="block font-bold text-space-900">Chat on WhatsApp</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Fastest Response</span>
+                </div>
+            </a>
+
+            <a id="modalMailLink" href="mailto:vetriglobaltrust@gmail.com?subject=Project Quote Request..." 
+            class="flex items-center gap-4 p-5 border border-slate-200 rounded-2xl hover:border-brand hover:bg-brand/5 transition-all group">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl group-hover:bg-brand group-hover:text-white transition-all">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                    <span class="block font-bold text-space-900">Send an Email</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold">For Detailed Briefs</span>
+                </div>
+            </a>
+        </div>
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <p class="text-center text-slate-500 text-sm mb-4">
+                        All projects are governed by our <br>
+                        <a href="terms.html" class="text-brand font-bold underline hover:text-brand-dark">Digital-Only & Escrow Policy</a>
+                    </p>
+                </div>
+            <p class="text-center text-slate-400 text-xs mt-8">
+                By reaching out, you agree to our 100% Digital Terms & Escrow Policy.
+            </p>
+        </div>
+    </div>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-6">
+                        Built for the <br>
+                        <span class="text-brand">Digital Economy.</span>
+                    </h2>
+                    <p class="text-slate-500 text-lg mb-10 leading-relaxed">
+                        Vetri isn't just another agency. We are a collective built on the principle that digital projects should be transparent, secure, and world-class.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand/10 text-brand flex items-center justify-center rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Vetted Experts Only</h4>
+                                <p class="text-slate-600">Every talent in our collective undergoes a rigorous technical and communication audit. We don't hire; we curate.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand/10 text-brand flex items-center justify-center rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Milestone-based Payments</h4>
+                                <p class="text-slate-600">Pay only for what is delivered. Your funds are held in secure escrow and released only after you approve the milestone.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand/10 text-brand flex items-center justify-center rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/><path d="M12 2v20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Global Standard Quality</h4>
+                                <p class="text-slate-600">We operate to high-tier technical standards, ensuring your code, design, and content are ready for a global audience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <button onclick="toggleModal('General Inquiry')" class="bg-brand text-white px-8 py-4 rounded-2xl font-bold hover:bg-brand-dark transition-all shadow-lg shadow-brand/20">
+                            Start Your Project
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-[40px] p-8 border border-slate-100 relative">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-4 bg-slate-100 rounded w-3/4"></div>
+                            <div class="h-4 bg-slate-100 rounded w-full"></div>
+                            <div class="h-4 bg-slate-100 rounded w-5/6"></div>
+                            <div class="pt-4 flex justify-between items-center">
+                                <div class="h-8 bg-brand/20 rounded-lg w-32"></div>
+                                <div class="text-brand font-bold text-sm italic">Verified by Vetri Escrow</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-space-900 text-white p-6 rounded-3xl shadow-2xl max-w-[200px]">
+                        <p class="text-xs font-bold uppercase tracking-widest text-brand mb-2">Escrow Status</p>
+                        <p class="text-lg font-bold">100% Protected</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-4">The Project Journey.</h2>
+                <p class="text-slate-500 text-lg">From initial deposit to final release, your project is mapped and secured.</p>
+            </div>
+
+            <div class="relative">
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-200"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-brand text-white rounded-full flex items-center justify-center mb-6 shadow-xl shadow-brand/20 ring-8 ring-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 15.5 14 19l6-7"/><path d="M9.5 14.5 4 16l-.922-3.5c-.194-.737-.123-1.513.201-2.201L5.5 5.5l9-3.5 3 4.5c.45.675.614 1.494.463 2.285L17 12.5"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">01. Secure Deposit</h3>
+                        <p class="text-sm text-slate-500">Funds for Milestone 1 are placed in escrow. Work begins immediately.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-white text-brand border-2 border-brand rounded-full flex items-center justify-center mb-6 ring-8 ring-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">02. Execution</h3>
+                        <p class="text-sm text-slate-500">Our vetted experts build according to the agreed brief and standards.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-white text-brand border-2 border-brand rounded-full flex items-center justify-center mb-6 ring-8 ring-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">03. Client Review</h3>
+                        <p class="text-sm text-slate-500">You review the delivery. If it meets the brief, you approve the milestone.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-brand text-white rounded-full flex items-center justify-center mb-6 shadow-xl shadow-brand/20 ring-8 ring-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15 2 2 4-4"/><rect width="20" height="14" x="2" y="6" rx="2"/><path d="M12 2v4"/><path d="M12 20v2"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">04. Pay Release</h3>
+                        <p class="text-sm text-slate-500">Approved funds are released to the team and we move to the next stage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter mb-4">Common Questions.</h2>
+                <p class="text-slate-500 text-lg">Everything you need to know about working with Vetri.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">How long does a typical project take?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        Timelines vary by scope. Small digital assets or brand identities usually take 1-2 weeks. Complex web applications or AI integrations typically range from 4-8 weeks.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">What if I'm not happy with a delivery?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        Our escrow model protects you. Each milestone includes a set number of revisions. If a milestone does not meet the "Definition of Done" agreed upon in the brief, you are not required to release the funds.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">Do you sign Non-Disclosure Agreements (NDAs)?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        Yes. For high-stakes digital projects, confidentiality is often key. We are happy to sign an NDA before you share sensitive project briefs or proprietary data.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">What payment methods do you accept?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        As a digital-only collective, we accept Bank Transfers, Major Credit Cards via Stripe, and Crypto (USDT/USDC) for international clients. All payments are processed through our secure escrow account to ensure project safety.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">How do we communicate during the project?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        We use a combination of WhatsApp for quick updates, Email for formal approvals, and Video Calls (Google Meet/Zoom) for milestone presentations. You will have a dedicated point of contact for your entire project journey.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">Do you offer post-project support?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        Absolutely. Once a project is completed and the final milestone is released, we provide a 14-day "Bug-Free" warranty. We also offer monthly maintenance retainers for long-term technical support and updates.
+                    </div>
+                </details>
+
+                <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors list-none">
+                        <span class="font-bold text-lg">Who owns the intellectual property (IP)?</span>
+                        <span class="text-brand group-open:rotate-180 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 bg-slate-50 text-slate-600 leading-relaxed">
+                        You do. Upon the final release of funds for the completed project, all ownership rights and source files (Code, Design, Video) are transferred 100% to the Client.
+                    </div>
+                </details>
+            </div>
+            <div class="mt-12 text-center">
+                <div class="inline-flex flex-col md:flex-row items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <p class="text-slate-600 font-medium">Still have a specific question?</p>
+                    <a href="contact.html" class="text-brand font-bold hover:underline">Chat with Support →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-space-900 text-white py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <img src="assets/logo.png" alt="Vetri" class="h-8 mb-6 brightness-0 invert">
+                    <p class="text-slate-400 max-w-sm leading-relaxed mb-6">
+                        A premium digital-only collective focused on high-stakes execution. We've eliminated the "Trust Tax" through vetted talent and secure escrow milestones.
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="px-3 py-1 bg-brand/10 border border-brand/20 text-brand text-xs font-bold rounded-full">100% DIGITAL</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-bold rounded-full">ESCROW PROTECTED</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="font-bold mb-6">Explore</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="#services" class="hover:text-brand transition-colors">Digital Services</a></li>
+                        <li><a href="#" onclick="toggleModal()" class="hover:text-brand transition-colors">Get a Quote</a></li>
+                        <li><a href="terms.html" class="hover:text-brand transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold mb-6">Connect</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="https://wa.me/2348147576013" class="hover:text-brand transition-colors">WhatsApp</a></li>
+                        <li><a href="mailto:vetriglobaltrust@gmail.com" class="hover:text-brand transition-colors">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs">
+                    © 2026 Vetri Digital Collective. All Rights Reserved.
+                </p>
+                <div class="flex gap-8 text-xs text-slate-500">
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>    
+
+    <script>
+        // Failsafe for Icons: Try to load immediately, then try again after 500ms
+        function initIcons() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+        window.addEventListener('load', initIcons);
+        setTimeout(initIcons, 500); 
+
+        /**
+        * Toggles the Quote Modal and updates contact links dynamically
+        */
+        function toggleModal(serviceName = "General Project") {
+            const modal = document.getElementById('quoteModal');
+            if (!modal) return;
+
+            const isOpening = modal.classList.contains('hidden');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+
+            if (isOpening) {
+                const phoneNumber = "2348147576013";
+                const emailAddress = "vetriglobaltrust@gmail.com";
+                
+                // This is the key: encode the service name properly
+                const encodedService = encodeURIComponent(serviceName);
+                const fullMessage = encodeURIComponent(`I want to get a quote for ${serviceName} with Vetri`);
+
+                // Update WhatsApp
+                const waLink = document.getElementById('modalWaLink');
+                if (waLink) {
+                    waLink.href = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+                }
+
+                // Update Email
+                const mailLink = document.getElementById('modalMailLink');
+                if (mailLink) {
+                    mailLink.href = `mailto:${emailAddress}?subject=Quote Request: ${serviceName}&body=Hi Vetri Team, I am interested in ${serviceName} for my project.`;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
