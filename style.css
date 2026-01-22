@@ -14,14 +14,14 @@
 @layer components {
   /* The "Get a Quote" Button Style */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold transition-all duration-200 
-           bg-brand text-white hover:bg-brand-dark hover:shadow-lg active:scale-95;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold transition-all duration-300 
+           bg-brand text-white hover:bg-brand-dark hover:shadow-lg hover:-translate-y-0.5 active:scale-95;
   }
 
   /* Secondary Button for Services */
   .btn-secondary {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold border-2 border-slate-200 
-           text-slate-700 hover:border-brand hover:text-brand transition-all duration-200;
+           text-slate-700 hover:border-brand hover:text-brand transition-all duration-300 hover:-translate-y-0.5;
   }
 
   /* Custom Modal Overlay */
@@ -32,4 +32,42 @@
   .modal-overlay.active {
     @apply opacity-100 pointer-events-auto;
   }
+}
+
+@layer utilities {
+  /* Scroll Reveal Base State */
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+  }
+
+  /* Reveal Active State (Triggered by JS) */
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Staggered Delays for Grids */
+  .reveal-delay-100 { transition-delay: 100ms; }
+  .reveal-delay-200 { transition-delay: 200ms; }
+  .reveal-delay-300 { transition-delay: 300ms; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fill-mode-forwards {
+  animation-fill-mode: forwards;
+  }
+
 }
